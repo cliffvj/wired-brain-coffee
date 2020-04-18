@@ -16,7 +16,7 @@ jobs:
       
       - run:
           name: Build Jekyll Site
-          command: build exec jekyll build
+          command: bundle exec jekyll build
       
       - run:
           name: Print the current time.
