@@ -9,9 +9,14 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
+      
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: Build Dependencies
+          command: bundle install
+      
+      - run:
+          name: Build Jekyll Site
+          command: bundle exec jekyll build
       
       - run:
           name: Print the current time.
